@@ -2,7 +2,7 @@
 
 This repository contains the project tasks and timeline for the team. Each task has a checkbox to track its completion.
 
-### Datensatz: (Bjarne)
+### ✔️ Datensatz: (Bjarne)
 - [x] OrganAMNIST, OrganCMNIST, OrganSMNIST concatenation
 - Timeline: Until 08.07.2023
 
