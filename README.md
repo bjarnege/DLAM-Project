@@ -1,3 +1,25 @@
+## Dependencies
+
+Run:
+
+```bash
+poetry config virtualenvs.in-project true
+```
+
+to install virtualenv in the project folder for better ide support
+
+Then install all dependencies:
+
+```bash
+poetry install
+```
+
+Start a shell session within
+
+```bash
+poetry shell
+```
+
 ## Project To-Do List
 
 This repository contains the project tasks and timeline for the team. Each task has a checkbox to track its completion.
