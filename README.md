@@ -40,10 +40,10 @@ This repository contains the project tasks and timeline for the team. Each task 
 
 ### Feinarbeit:
 - [ ] Refinement
-- Timeline: Until 02.09.2023
+- Timeline: Until 30.08.2023
 
 ### Präsentation: (alle)
 - [ ] Presentation at the end
-- Timeline: Until 08.09.2023
+- Timeline: Until 04.09.2023
 
 Please check the tasks above as they are completed.
