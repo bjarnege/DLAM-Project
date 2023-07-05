@@ -4,6 +4,8 @@ version = "0.1.0"
 description = ""
 authors = ["Bjarne <bjarne.ge@gmx.de>"]
 readme = "README.md"
+packages = [{ include = "dlam", from = "src" }]
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -12,7 +14,7 @@ torchvision = "^0.15.2"
 torchaudio = "^2.0.2"
 medmnist = "^2.2.2"
 numpy = "^1.25.0"
-
+ipykernel = "^6.24.0"
 
 [build-system]
 requires = ["poetry-core"]

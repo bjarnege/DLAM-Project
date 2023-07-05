@@ -12,6 +12,8 @@ Then install all dependencies:
 
 ```bash
 poetry install
+poetry shell
+pip install torch
 ```
 
 Start a shell session within
