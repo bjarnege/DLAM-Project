@@ -9,13 +9,14 @@ def load_dataset(dataset_name: str, split: str, download_dataset: bool = True):
 
     return DataClass(split=split, transform=torchvision.transforms.Compose([
         torchvision.transforms.ToTensor(),
-        torchvision.transforms.Normalize(mean=[.5], std=[.5])
+        torchvision.transforms.Normalize(mean=[0], std=[1])
     ]), download=download_dataset)
 
 def load_concat_dataset(split: str,
                         dataset_names: list = ["organamnist", "organcmnist", "organsmnist"],
                         download_dataset: bool = True,
-                        transform: bool = True):
+                        transform: bool = True,
+                        device: str = "cuda"):
     output_dataclass = {"imgs": np.empty((0, 28, 28)),
                         "labels": np.empty((0, 1)),
                         "infos": [],
@@ -33,10 +34,13 @@ def load_concat_dataset(split: str,
     # normalize and convert to tensor
     if transform == True:
         transforms = torchvision.transforms.Compose([torchvision.transforms.ToTensor(),
-                                            torchvision.transforms.Normalize(mean=[.5], std=[.5])])
+                                            torchvision.transforms.Normalize(mean=[0], std=[1])])
 
         output_dataclass["imgs"] = transforms(output_dataclass["imgs"]).permute((1, 0, 2)).contiguous()
         output_dataclass["labels"] = torch.Tensor(output_dataclass["labels"])
+
+        output_dataclass["imgs"].to(device)
+        output_dataclass["labels"].to(device)
 
 
     return output_dataclass

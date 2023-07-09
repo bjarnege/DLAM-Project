@@ -56,14 +56,11 @@ class Block(nn.Module):
 
     def forward(self, x):
       identity = x.clone()
-
       x = self.relu(self.batch_norm2(self.conv1(x)))
       x = self.batch_norm2(self.conv2(x))
 
       if self.i_downsample is not None:
           identity = self.i_downsample(identity)
-      print(x.shape)
-      print(identity.shape)
       x += identity
       x = self.relu(x)
       return x
