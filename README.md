@@ -37,9 +37,9 @@ This repository contains the project tasks and timeline for the team. Each task 
 - Timeline: Until 30.08.2023
 
 
-### CGAN: (Ella, Ruben)
-- [ ] Adjust architecture
-- [ ] Generate `X_fake` dataset with labels `c_fake`
+### ✔️ CGAN: (Ella, Ruben)
+- [x] Adjust architecture
+- [x] Generate `X_fake` dataset with labels `c_fake`
 - Timeline: From 01.08.2023 to 26.08.2023
 
 ### Feinarbeit:
